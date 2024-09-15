@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Spa - Indulge in Luxury</title>
+    <link rel="icon" href="./sources/logospa.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="scripts.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="bg-image">
+<header class="container-fluid py-0">
+    <nav class="navbar navbar-expand-lg navbar-expand-md">
+        <div class="container d-flex align-content-center">
+            <a class="navbar-brand d-flex align-content-center" href="#home"><img src="./sources/logospa.png" class="float-start card-img-top ds d-flex align-items-center" alt="logo icon"><span class="fs-5 fw-bold text-warning d-flex align-items-center">luxe</span><span class="fs-5 fw-bold cx align-content-center">spa</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon cx"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto nav-underline">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#therapists">Therapists</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#facility">Facility</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="d-flex align-items-center text-decoration-none cx me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+                    <a href="#" class="btn text-decoration-none" id="signupBtn" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero-section py-2 mt-0">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold mb-0 animated--heading" data-aos="fade-up" data-colors='["#ffc107","#ffffff","#000000","#ffc107"]' data-color-end="#FFFFFF"><a href="./booking.html">Luxury that feels like home</a></h1>
+                <p class="lead mb-3" data-aos="fade-up" data-aos-delay="600">Experience the ultimate relaxation and rejuvenation at Luxe Spa. Our expert therapists and state-of-the-art facilities ensure a truly luxurious experience.</p>
+                <form class="mb-3">
+                    <div class="input-group mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <select class="form-select bg-transparent border border-warning ">
+                            <option selected>All Treatments</option>
+                            <option>Massage</option>
+                            <option>Facial</option>
+                            <option>Body Wrap</option>
+                            <option>Manicure & Pedicure</option>
+                        </select>
+                        <button class="btn d-flex align-items-center fs-5" type="submit" href="#services">search</button>
+                    </div>
+                </form>
+                <div class="d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#services" class="btn btn-outline me-3 fs-5">Book Now</a>
+                    <a class="text-decoration-none d-flex align-items-center lo fs-1" id="playButton">
+                    <i class="bi bi-play-circle-fill text-warning me-2 fs-0"></i><span class="fs-6 cx">Play Video</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 coveredges" data-aos="slide-right">
+                <div class="ratio ratio-16x9 mb-2 d-flex align-content-center">
+                    <video id="heroVideo" class="w-100" controls>
+                        <source src="./sources/er.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section py-2">
+    <div class="width">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-3 stats-column">
+                    <h2 class="h5 fw-bold mb-0"><span class="counter" data-target="98" data-aos-delay="400">0</span>%</h2>
+                    <p class="mb-0">Client Satisfaction</p>
+                </div>
+                <div class="col-md-3 mb-3 stats-column">
+                    <h2 class="h1 fw-bold mb-0"><span class="counter" data-target="9000" data-aos-delay="400">0</span>+</h2>
+                    <p class="mb-0">Luxury Treatments</p>
+                </div>
+                <div class="col-md-3 mb-3 stats-column">
+                    <h2 class="h1 fw-bold mb-0"><span class="counter" data-target="8900" data-aos-delay="400">0</span>+</h2>
+                    <p class="mb-0">Happy Clients</p>
+                </div>
+                <div class="col-md-3 mb-3 stats-column">
+                    <h2 class="h5 fw-bold mb-0"><span class="counter" data-target="100" data-aos-delay="400">0</span>%</h2>
+                    <p class="mb-0">Luxury Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Our Luxurious <strong>Services</strong></h2>
+        <div class="row">
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="bi bi-droplet service-icon fs-1"></i>
+                        <h5 class="card-title">Aromatherapy Massage</h5>
+                        <p class="card-text">Indulge in a sensory journey with our signature aromatherapy massage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="bi bi-flower1 service-icon fs-1"></i>
+                        <h5 class="card-title">Luxury Facial</h5>
+                        <p class="card-text">Rejuvenate your skin with our premium facial treatments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="bi bi-water service-icon fs-1"></i>
+                        <h5 class="card-title">Hydrotherapy</h5>
+                        <p class="card-text">Experience the healing power of water with our hydrotherapy treatments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="bi bi-gem service-icon fs-1"></i>
+                        <h5 class="card-title">Gemstone Therapy</h5>
+                        <p class="card-text">Harness the energy of precious stones for ultimate relaxation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="specialties" class="specialties-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-4 text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="fas fa-spa fa-flip fa-2x service-icon mb-2" style="--fa-animation-duration: 3s;"></i>
+                        <p>Hot Stone Massage</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="fas fa-leaf fa-2x fa-flip service-icon mb-2" style="--fa-animation-duration: 3s;"></i>
+                        <p>Herbal Wraps</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center mb-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="fas fa-hands fa-flip fa-2x service-icon mb-2" style="--fa-animation-duration: 3s;"></i>
+                        <p>Reflexology</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center mb-4" data-aos="fade-up" data-aos-delay="800">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="fas fa-tint fa-flip fa-2x service-icon mb-2" style="--fa-animation-duration: 3s;"></i>
+                        <p>Hydrafacial</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center mb-4" data-aos="fade-up" data-aos-delay="1000">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="fas fa-feather-alt fa-flip fa-2x service-icon mb-2" style="--fa-animation-duration: 3s;"></i>
+                        <p>Ayurvedic Treatments</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-4 text-center mb-4" data-aos="fade-up" data-aos-delay="1200">
+                <div class="card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="card-body">
+                        <i class="fas fa-moon fa-flip fa-2x service-icon mb-2" style="--fa-animation-duration: 3s;"></i>
+                        <p>Sleep Therapy</p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="looking-for py-5">
+    <div class="container">
+        <h5 class="text-start mb-5" data-aos="fade-up">Discover Our Offerings:</h5>
+        <div class="row">
+            <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Spa Packages</h5>
+                        <p>Indulge in our carefully curated spa packages for ultimate relaxation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Wellness Retreats</h5>
+                        <p>Immerse yourself in our rejuvenating wellness retreats.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Beauty Treatments</h5>
+                        <p>Enhance your natural beauty with our premium treatments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="800">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness Classes</h5>
+                        <p>Achieve your wellness goals with our expert-led fitness classes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="therapists" class="therapists-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Our Expert <strong>Therapists</strong></h2>
+        <div class="row">
+            <div class="col-md-3 mb-4 d-block" data-aos="fade-up" data-aos-delay="200">
+                <div class="therapist-card h-100">
+                    <div class="col-md-5 ps-md-3 pt-md-3 rounded float-start">
+                        <img src="./sources/spaat4.png" class="rounded float-start card-img-top" alt="Emma Johnson">
+                    </div>
+                    <div class="therapist-info">
+                        <h5 class="therapist-name text-start">Emma Johnson</h5>
+                        <p class="therapist-specialty text-start">Massage Therapist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="therapist-card h-100">
+                    <div class="col-md-5 ps-md-3 pt-md-3 rounded float-start">
+                        <img src="./sources/spaat3.png" class="rounded float-start card-img-top" alt="Michael Chen">
+                    </div>
+                    <div class="therapist-info">
+                        <h6 class="therapist-name text-start">Michelle joans</h6>
+                        <p class="therapist-specialty text-start">Aromatherapist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="therapist-card h-100">
+                    <div class="col-md-5 ps-md-3 pt-md-3 rounded float-start">
+                        <img src="./sources/spaat2.png" class="rounded float-start card-img-top" alt="Sophia Patel">
+                    </div>
+                    <div class="p-md-3">
+                        <h5 class="therapist-name text-start">Sophia kate</h5>
+                        <p class="therapist-specialty text-start">Esthetician</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="therapist-card h-100">
+                    <div class="col-md-5 ps-md-3 pt-md-3 rounded float-start">
+                        <img src="./sources/spaat1.png" class="rounded float-start card-img-top" alt="Daniel Kim">
+                    </div>
+                    <div class="p-md-3">
+                        <h5 class="therapist-name text-start">stacy jones</h5>
+                        <p class="therapist-specialty text-start">Ayurvedic Practitioner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="steps-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Your Journey to <strong>Relaxation</strong></h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-calendar-alt service-icon"></i>
+                <h5>Book Your Appointment</h5>
+                <p>Choose your preferred treatment and time slot.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-spa fa-flip service-icon" style="--fa-animation-duration: 3s;"></i>
+                <h5>Arrive and Unwind</h5>
+                <p>Step into our tranquil environment and leave your worries behind.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-hands fa-beat-fade service-icon" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;"></i>
+                <h5>Experience Bliss</h5>
+                <p>Indulge in your chosen treatment delivered by our expert therapists.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-smile fa-beat service-icon" style="--fa-beat-scale: 2.0;"></i>
+                <h5>Feel Renewed</h5>
+                <p>Leave feeling refreshed, rejuvenated, and ready to take on the world.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-5 coveredges">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="slide-left">
+                <h2 class="mb-4">Experience <strong>Luxury Wellness</strong></h2>
+                <p class="mb-4">Indulge in our world-class spa treatments and experience the pinnacle of relaxation and rejuvenation.</p>
+                <a href="#" class="btn">Book Your Spa Day</a>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="600">
+                <img src="./sources/sparoom2.png" alt="Luxury Spa Treatment" class="img-fluid Luxuryimg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="facility" class="facility py-5 coveredges">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="600">
+                <div class="cuboid-container">
+                    <div class="cuboid">
+                        <div class="cuboid-face">
+                            <img src="./sources/facility1.png" alt="Spa Facility 1">
+                        </div>
+                        <div class="cuboid-face">
+                            <img src="./sources/facility2.png" alt="Spa Facility 2">
+                        </div>
+                        <div class="cuboid-face">
+                            <img src="./sources/facility5.png" alt="Spa Facility 3">
+                        </div>
+                        <div class="cuboid-face">
+                            <img src="./sources/facility4.png" alt="Spa Facility 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="slide-right">
+                <h2 class="mb-4">State-of-the-Art <strong>Spa Facilities</strong></h2>
+                <p class="mb-4">Our luxurious spa facilities are designed to provide the ultimate relaxation experience. From our tranquil treatment rooms to our rejuvenating hydrotherapy pools, every detail is crafted for your comfort and well-being.</p>
+                <a href="#" class="btn">Explore Our Facility</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container mt-5 coveredges">
+    <h2 class="text-center mb-4">What Our <strong>Clients Say</strong></h2>
+    <div class="row">
+        <div class="col-md-6 mb-4" data-aos="slide-left">
+            <div id="testimonialViewport1" class="testimonial-viewport"></div>
+        </div>
+        <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="600">
+            <div id="testimonialViewport2" class="testimonial-viewport"></div>
+        </div>
+    </div>
+</div>
+
+<section id="about" class="register-cta py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h2 class="mb-0">Ready to <strong>Indulge</strong> in Luxury?</h2>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <button id="buyNowBtn" class="buy-now">
+                    <span class="position-relative z-1">Book your experience</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3 mb-md-0">
+            <a class="navbar-brand d-flex align-content-center mb-3" href="#home">
+                <img src="./sources/logospa.png" class="float-start card-img-top ds" alt="Emma Johnson">
+                <span class="fs-5 fw-bold text-warning d-flex align-items-center">Luxe</span>
+                <span class="fs-5 fw-bold align-content-center">Spa</span>
+            </a>
+            <p>Luxe Spa is your sanctuary for relaxation and rejuvenation. Experience the pinnacle of luxury wellness and beauty treatments.</p>
+          <div class="d-flex grow mb-4">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-3 mb-md-0 offset-md-2">
+          <h5 class="mb-4">Services</h5>
+          <ul class="list-unstyled">
+            <li><a href="#services" class="cx text-decoration-none mb-3">Massages</a></li>
+            <li><a href="#services" class="cx text-decoration-none mb-3">Facials</a></li>
+            <li><a href="#services" class="cx text-decoration-none mb-3">Body Treatments</a></li>
+            <li><a href="#services" class="cx text-decoration-none mb-3">Manicure & Pedicure</a></li>
+            <li><a href="#services" class="cx text-decoration-none mb-3">Therapy</a></li>
+            <li><a href="#services" class="cx text-decoration-none mb-3">Reflexology</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-2 mb-3 mb-md-0">
+          <h5 class="mb-4">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="cx text-decoration-none">Home</a></li>
+            <li><a href="#services" class="cx text-decoration-none">Services</a></li>
+            <li><a href="#therapists" class="cx text-decoration-none">Therapists</a></li>
+            <li><a href="#facility" class="cx text-decoration-none">Facility</a></li>
+            <li><a href="#about" class="cx text-decoration-none">About Us</a></li>
+            <li><a href="#contact" class="cx text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-2 mb-3 mb-md-0">
+          <h5 class="mb-4">Contact us</h5>
+          <ul class="list-unstyled">
+            <li><a href="#contact" class="cx text-decoration-none mb-2">+254791285679</a></li>
+            <li><a href="#contact" class="cx text-decoration-none mb-2">location</a></li>
+            <li><a href="#contact" class="cx text-decoration-none mb-2">Careers</a></li>
+            <li><a href="#contact" class="cx text-decoration-none mb-2">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-top py-0">
+      <div class="container">
+        <p class="text-center mb-0">&copy; 2024 <span class="fs-5 fw-bold text-warning">luxe</span><span class="fs-5 fw-bold cx">spa</span>. All rights reserved. | Designed with <i class="bi bi-heart-pulse text-warning mb-2 fs-5"></i> by <a href="#" class="cx text-decoration-none">Dev. Allan Mwangi</a></p>
+      </div>
+    </div>
+</footer>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="background-color: var(--background-color); color: var(--text-color);">
+            <div class="row g-0">
+                <div class="col-md-6 img-container"></div>
+                <div class="col-md-6">
+                    <div class="modal-body p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="text-center mt-4">
+                            <h2 class="fw-bold mb-2">Welcome Back!</h2>
+                            <p class="text-muted mb-4">to Luxe Spa, so happy to see you!</p>
+                            <div class="d-grid gap-3">
+                                <button class="btn btn-outline-secondary w-100">
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                        <path d="M1 1h22v22H1z" fill="none"/>
+                                    </svg>
+                                    <span>Continue with Google</span>
+                                </button>
+                                <button class="btn btn-outline-secondary w-100">
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1877F2">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                    <span>Continue with Facebook</span>
+                                </button>
+                                <button class="btn btn-outline-secondary w-100">
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14.94 5.19A4.38 4.38 0 0 0 16 2.75a4.38 4.38 0 0 0-3.06 1.53 4.13 4.13 0 0 0-1.06 2.37 3.69 3.69 0 0 0 3.06-1.46zm2.94 7.59c0-3.37 2.81-5 2.87-5.09a5.75 5.75 0 0 0-4.5-2.44c-1.94-.19-3.75 1.12-4.75 1.12s-2.44-1.06-4.06-1.06c-2.06.13-4 1.19-5.06 3.06-2.19 3.75-.56 9.31 1.56 12.37 1.06 1.5 2.31 3.19 3.94 3.13 1.56-.07 2.19-.94 4.06-.94s2.44.94 4.13.91c1.69-.03 2.81-1.53 3.87-3.03 1.25-1.75 1.75-3.44 1.75-3.53-.03-.03-3.37-1.28-3.37-5.03v-.47z"/>
+                                    </svg>
+                                    <span>Continue with Apple</span>
+                                </button>
+                            </div>
+                            <p class="mt-4 text-muted">Dont have an account? <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a></p>
+                            <p class="mt-4 small text-muted">
+                                By continuing, you agree to our <a href="#" class="text-decoration-none">Terms of Use</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="background-color: var(--background-color); color: var(--text-color);">
+            <div class="row g-0">
+                <div class="col-md-6 img-container2"></div>
+                <div class="col-md-6">
+                    <div class="modal-body p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="text-center mt-4">
+                            <h2 class="fw-bold mb-2">Welcome to luxury!</h2>
+                            <p class="text-muted mb-4">get started with your luxury experience</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" placeholder="Password" required>
+                                </div>
+                                <button type="submit" class="btn w-100" id="signupBtn" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                            </form>
+                            <p class="mt-4 text-muted">Already have an account? <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</a></p>
+                            <p class="mt-4 small text-muted">
+                                By signing up, you agree to our <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast-container xo">
+    <div id="responsiveToast" class="toast translucent-toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Responsive Website</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            This website is responsive to your browser's dark mode and light mode. Try changing the default settings in your browser to see it adapt!
+        </div>
+    </div>
+</div>   
+</body>
+</html>

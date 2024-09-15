@@ -1,0 +1,501 @@
+        :root {
+            --primary-color:  #ffc107;
+            --secondary-color: #FFD700;
+            --text-color: #000000;
+            --background-color: #FFFFFF;
+            --card-background: #FFFFFF;
+            --socials-color:  #ffffff;
+            --border-color: #e2d7d7e8;
+            --shadow-color: #000000e8;
+        }
+    
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #ffc107;
+                --secondary-color: #FFD700;
+                --text-color: #FFFFFF;
+                --background-color: #121212;
+                --card-background: #1E1E1E;
+                --socials-color:  #000000;
+                --border-color: #353131d2;
+                --shadow-color: #ffc107;
+            }
+        }
+    
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+    
+        h1, h2, h3, h4, h5, h6, ul {
+            color: var(--primary-color);
+        }
+        
+        .border-top {
+            border-top: 1px solid var(--border-color);
+        }
+        .card {
+            background-color: var(--card-background);
+            color: var(--text-color);
+            border: none;
+            box-shadow: 0 4px 4px var(--shadow-color);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            transform-style: preserve-3d;
+            animation: shadow-rush 4s linear infinite;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 8px 12px var(--card-background);
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            z-index: 1;
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+        .btn {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--background-color);
+        }
+    
+        .btn:hover {
+            background-color: var(--primary-color);
+            border-color: var(--secondary-color);
+        }
+    
+        .navbar {
+            background-color: rgba(var(--background-color), 0.1) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .lo:hover {
+            cursor: pointer;
+        }
+    
+        .width {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            padding: 2rem 0rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 65%;
+            margin: 2rem auto; 
+        }
+        
+        .stats-column {
+            position: relative;
+        }
+        .stats-column:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 5%;
+            height: 120%;
+            width: 1px;
+            background-color: rgb(0, 0, 0);
+        }
+        @media (max-width: 767px) {
+            .stats-column::after {
+                display: none;
+            }
+        }    
+        
+        .bg-image {
+            background-image: url('https://google.com/luxury-spa-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        .hero-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .counter {
+            font-size: 2.5rem;
+            color: var(--text-color);
+        }
+        .cx {
+            color: var(--text-color);
+        }
+      
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .testimonial-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: var(--socials-color);
+            margin: 0 2px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-color);
+        }
+
+        .therapist-card {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--background-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: shadow-rush 4s linear infinite;
+        }
+        
+        @keyframes shadow-rush {
+            0%, 100% {
+                box-shadow: 0 4px 6px var(--shadow-color);
+            }
+            12.5% {
+                box-shadow: 4px 4px 6px var(--shadow-color);
+            }
+            25% {
+                box-shadow: 4px 0 6px var(--shadow-color);
+            }
+            37.5% {
+                box-shadow: 4px -4px 6px var(--shadow-color);
+            }
+            50% {
+                box-shadow: 0 -4px 6px var(--shadow-color);
+            }
+            62.5% {
+                box-shadow: -4px -4px 6px var(--shadow-color);
+            }
+            75% {
+                box-shadow: -4px 0 6px var(--shadow-color);
+            }
+            87.5% {
+                box-shadow: -4px 4px 6px var(--shadow-color);
+            }
+        }
+
+        .therapist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px var(--shadow-color);
+        }
+
+        .therapist-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .therapist-info {
+            padding: 1rem;
+            text-align: start;
+            flex-grow: 1;
+        }
+
+        .therapist-name {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            text-align: start;
+            font-size: 1rem;
+            color:  #ffc107;
+        }
+
+        .therapist-specialty {
+            color: #6c757d;
+            margin-bottom: 0;
+            text-align: start;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-color);
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color);
+        }
+        .navbar-toggler-icon {
+            color: var(--text-color);
+        }
+        .navbar-toggler {
+            color: var(--text-color);
+        }
+
+        .nav-underline li {
+            position: relative;
+          }
+          
+        .nav-underline li a {
+            display: block;
+            padding: 10px 15px;
+          }
+          
+        .nav-underline li a:after {
+            content: "";
+            position: absolute; 
+            bottom: 0;
+            left: 0; 
+            width: 0;
+            border-bottom: 2px solid var(--primary-color);
+            transition: 0.35s;
+          }
+          
+        .nav-underline li a:hover:after,
+        .nav-underline li a:focus:after {
+            width: 100%;
+          }
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+        }
+        .translucent-toast {
+            background-color: rgba(var(--bs-body-bg-rgb), 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+        .xo {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .form-select:focus {
+            border-color: #ffc107;
+            box-shadow: 0 0 0 0.25rem rgba(228, 177, 10, 0.25);
+          }
+        
+        .form-select:focus {
+            background-color: var(--background-color) !important;
+            color: var(--text-color) !important;
+          }
+        
+        .form-select:focus option:checked {
+            background: #ffc107 linear-gradient(0deg, #ffc107 0%, #ffc107 100%);
+          }
+        .img-container {
+            background-image: url(./sources/login.png);
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            border-radius: 50px 0px 0px 50px;
+          }
+        .img-container2 {
+            background-image: url(./sources/signup.png);
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            border-radius: 50px 0px 0px 50px;
+          }
+
+        .ds {
+            background-size: cover;
+            background-position: center;
+            min-height: 30px;
+            width: fit-content;
+            height: fit-content;
+            object-fit: cover;
+          }
+        .btn-outline-secondary {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+        }
+        .btn-outline-secondary:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+        .modal-dialog {
+            max-width: 800px;
+        }
+        .modal-content {
+            border-radius: 50px;
+            border: none;
+        }
+
+        .buy-now {
+            position: relative;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .buy-now::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(90deg, #ffc107, black, white, #ffc107af);
+            background-size: 300% 100%;
+            border-radius: 50px;
+            z-index: -1;
+            animation: animateBorder 4s linear infinite;
+        }
+        .buy-now::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background-color: #33333300;
+            border-radius: 48px;
+            z-index: -1;
+        }
+        @keyframes animateBorder {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 300% 0%; }
+        }
+
+        .animated--heading a {
+            text-decoration: none;
+            color: #000000;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%;
+            animation: rainbow-text-animation 6s ease-in-out infinite;
+        }
+
+        @keyframes rainbow-text-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .testimonial-viewport {
+            perspective: 1000px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            animation: shadow-rush 4s linear infinite;
+        }
+        .testimonial-card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 3s;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            animation: shadow-rush 4s linear infinite;
+        }
+        .testimonial-card.active {
+            z-index: 2;
+        }
+        .testimonial-card.next {
+            z-index: 1;
+        }
+        .testimonial-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .cuboid-container {
+            perspective: 3000px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .cuboid {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 3s;
+        }
+        .cuboid-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .cuboid-face img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cuboid-face:nth-child(1) { transform: rotateY(0deg) translateZ(225px); }
+        .cuboid-face:nth-child(2) { transform: rotateY(90deg) translateZ(225px); }
+        .cuboid-face:nth-child(3) { transform: rotateY(180deg) translateZ(225px); }
+        .cuboid-face:nth-child(4) { transform: rotateY(-90deg) translateZ(225px); }
+
+        .Luxuryimg {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .coveredges{
+            overflow: hidden;
+        }
+  
