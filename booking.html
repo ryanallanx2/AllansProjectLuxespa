@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Spa - book your Luxury</title>
+    <link rel="icon" href="./sources/logospa.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="scripts.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <header class="container-fluid py-0">
+        <nav class="navbar navbar-expand-lg navbar-expand-md">
+            <div class="container d-flex align-content-center">
+                <a class="navbar-brand d-flex align-content-center" href="#home"><img src="./sources/logospa.png" class="float-start card-img-top ds d-flex align-items-center" alt="logo icon"><span class="fs-5 fw-bold text-warning d-flex align-items-center">luxe</span><span class="fs-5 fw-bold cx align-content-center">spa</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon cx"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto nav-underline">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#therapists">Therapists</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#facility">Facility</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="d-flex align-items-center text-decoration-none cx me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+                        <a href="#" class="btn text-decoration-none" id="signupBtn" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+   
+    
+    <main class="container my-3">
+        <h1 class="text-center mb-5">Book Your <strong>Luxurious Experience</strong></h1>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="cardform">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">Select Your Service</h2>
+                        <form id="bookingForm">
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="service" required>
+                                    <option value="" selected disabled>Select a service</option>
+                                    <option value="aromatherapy">Aromatherapy Massage</option>
+                                    <option value="facial">Luxury Facial</option>
+                                    <option value="hydrotherapy">Hydrotherapy</option>
+                                    <option value="gemstone">Gemstone Therapy</option>
+                                </select>
+                                <label for="service">Choose a service</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="therapist">
+                                    <option value="" selected disabled>Choose a therapist</option>
+                                    <option value="emma">Emma Johnson</option>
+                                    <option value="michelle">Michelle Joans</option>
+                                    <option value="sophia">Sophia Kate</option>
+                                    <option value="stacy">Stacy Jones</option>
+                                </select>
+                                <label for="therapist">Select Therapist (Optional)</label>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control" id="date" required>
+                                        <label for="date">Preferred Date</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="time" required>
+                                            <option value="" selected disabled>Select a time</option>
+                                            <option value="09:00">09:00 AM</option>
+                                            <option value="11:00">11:00 AM</option>
+                                            <option value="14:00">02:00 PM</option>
+                                            <option value="16:00">04:00 PM</option>
+                                        </select>
+                                        <label for="time">Preferred Time</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="phone" required placeholder="7XXXXXXXX">
+                                <label for="phone">Phone Number (+254)</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="notes" rows="3" style="height: 100px;"></textarea>
+                                <label for="notes">Special Requests (Optional)</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="cardform">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">Booking Summary</h2>
+                        <div id="bookingSummary" class="row">
+                            <div class="col-md-8">
+                                <p><strong>Service:</strong> <span id="summaryService">Not selected</span></p>
+                                <p><strong>Therapist:</strong> <span id="summaryTherapist">Not selected</span></p>
+                                <p><strong>Date:</strong> <span id="summaryDate">Not selected</span></p>
+                                <p><strong>Time:</strong> <span id="summaryTime">Not selected</span></p>
+                                <p><strong>Phone:</strong> <span id="summaryPhone">Not provided</span></p>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <img class="therapist-img" id="therapistImage" src="/placeholder.svg?height=100&width=100" alt="Therapist" class="therapist-img">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="text-end">
+                            <h4>Total: KES <span id="totalPrice">0</span></h4>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 mt-3" form="bookingForm">Confirm Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="pt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <a class="navbar-brand d-flex align-content-center mb-3" href="#home">
+                    <img src="./sources/logospa.png" class="float-start card-img-top ds" alt="Emma Johnson">
+                    <span class="fs-5 fw-bold text-warning d-flex align-items-center">Luxe</span>
+                    <span class="fs-5 fw-bold align-content-center">Spa</span>
+                </a>
+                <p>Luxe Spa is your sanctuary for relaxation and rejuvenation. Experience the pinnacle of luxury wellness and beauty treatments.</p>
+              <div class="d-flex grow mb-4">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+    
+            <div class="col-md-2 mb-3 mb-md-0 offset-md-2">
+              <h5 class="mb-4">Services</h5>
+              <ul class="list-unstyled">
+                <li><a href="#services" class="cx text-decoration-none mb-3">Massages</a></li>
+                <li><a href="#services" class="cx text-decoration-none mb-3">Facials</a></li>
+                <li><a href="#services" class="cx text-decoration-none mb-3">Body Treatments</a></li>
+                <li><a href="#services" class="cx text-decoration-none mb-3">Manicure & Pedicure</a></li>
+                <li><a href="#services" class="cx text-decoration-none mb-3">Therapy</a></li>
+                <li><a href="#services" class="cx text-decoration-none mb-3">Reflexology</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-md-2 mb-3 mb-md-0">
+              <h5 class="mb-4">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#home" class="cx text-decoration-none">Home</a></li>
+                <li><a href="#services" class="cx text-decoration-none">Services</a></li>
+                <li><a href="#therapists" class="cx text-decoration-none">Therapists</a></li>
+                <li><a href="#facility" class="cx text-decoration-none">Facility</a></li>
+                <li><a href="#about" class="cx text-decoration-none">About Us</a></li>
+                <li><a href="#contact" class="cx text-decoration-none">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-md-2 mb-3 mb-md-0">
+              <h5 class="mb-4">Contact us</h5>
+              <ul class="list-unstyled">
+                <li><a href="#contact" class="cx text-decoration-none mb-2">+254791285679</a></li>
+                <li><a href="#contact" class="cx text-decoration-none mb-2">location</a></li>
+                <li><a href="#contact" class="cx text-decoration-none mb-2">Careers</a></li>
+                <li><a href="#contact" class="cx text-decoration-none mb-2">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top py-0">
+          <div class="container">
+            <p class="text-center mb-0">&copy; 2024 <span class="fs-5 fw-bold text-warning">luxe</span><span class="fs-5 fw-bold cx">spa</span>. All rights reserved. | Designed with <i class="bi bi-heart-pulse text-warning mb-2 fs-5"></i> by <a href="#" class="cx text-decoration-none">Dev. Allan Mwangi</a></p>
+          </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="background-color: var(--background-color); color: var(--text-color);">
+            <div class="row g-0">
+                <div class="col-md-6 img-container"></div>
+                <div class="col-md-6">
+                    <div class="modal-body p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="text-center mt-4">
+                            <h2 class="fw-bold mb-2">Welcome Back!</h2>
+                            <p class="text-muted mb-4">to Luxe Spa, so happy to see you!</p>
+                            <div class="d-grid gap-3">
+                                <button class="btn btn-outline-secondary w-100">
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                        <path d="M1 1h22v22H1z" fill="none"/>
+                                    </svg>
+                                    <span>Continue with Google</span>
+                                </button>
+                                <button class="btn btn-outline-secondary w-100">
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1877F2">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                    <span>Continue with Facebook</span>
+                                </button>
+                                <button class="btn btn-outline-secondary w-100">
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14.94 5.19A4.38 4.38 0 0 0 16 2.75a4.38 4.38 0 0 0-3.06 1.53 4.13 4.13 0 0 0-1.06 2.37 3.69 3.69 0 0 0 3.06-1.46zm2.94 7.59c0-3.37 2.81-5 2.87-5.09a5.75 5.75 0 0 0-4.5-2.44c-1.94-.19-3.75 1.12-4.75 1.12s-2.44-1.06-4.06-1.06c-2.06.13-4 1.19-5.06 3.06-2.19 3.75-.56 9.31 1.56 12.37 1.06 1.5 2.31 3.19 3.94 3.13 1.56-.07 2.19-.94 4.06-.94s2.44.94 4.13.91c1.69-.03 2.81-1.53 3.87-3.03 1.25-1.75 1.75-3.44 1.75-3.53-.03-.03-3.37-1.28-3.37-5.03v-.47z"/>
+                                    </svg>
+                                    <span>Continue with Apple</span>
+                                </button>
+                            </div>
+                            <p class="mt-4 text-muted">Dont have an account? <a href="" class="text-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a></p>
+                            <p class="mt-4 small text-muted">
+                                By continuing, you agree to our <a href="#" class="text-decoration-none">Terms of Use</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="background-color: var(--background-color); color: var(--text-color);">
+            <div class="row g-0">
+                <div class="col-md-6 img-container2"></div>
+                <div class="col-md-6">
+                    <div class="modal-body p-4">
+                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="text-center mt-4">
+                            <h2 class="fw-bold mb-2">Welcome to luxury!</h2>
+                            <p class="text-muted mb-4">get started with your luxury experience</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" placeholder="Password" required>
+                                </div>
+                                <button type="submit" class="btn w-100" id="signupBtn" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                            </form>
+                            <p class="mt-4 text-muted">Already have an account? <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</a></p>
+                            <p class="mt-4 small text-muted">
+                                By signing up, you agree to our <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast-container xo">
+    <div id="responsiveToast" class="toast translucent-toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Responsive Website</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            This website is responsive to your browser's dark mode and light mode. Try changing the default settings in your browser to see it adapt!
+        </div>
+    </div>
+</div>   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('bookingForm');
+            const summaryService = document.getElementById('summaryService');
+            const summaryTherapist = document.getElementById('summaryTherapist');
+            const summaryDate = document.getElementById('summaryDate');
+            const summaryTime = document.getElementById('summaryTime');
+            const summaryPhone = document.getElementById('summaryPhone');
+            const totalPrice = document.getElementById('totalPrice');
+            const therapistImage = document.getElementById('therapistImage');
+
+            const prices = {
+                aromatherapy: 35000,
+                facial: 30000,
+                hydrotherapy: 40000,
+                gemstone: 45000
+            };
+
+            const therapistImages = {
+                emma: './sources/spaat4.png',
+                michelle: './sources/spaat3.png',
+                sophia: './sources/spaat2.png',
+                stacy: './sources/spaat1.png'
+            };
+
+            form.addEventListener('change', function() {
+                const service = document.getElementById('service').value;
+                const therapist = document.getElementById('therapist').value;
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+                const phone = document.getElementById('phone').value;
+
+                summaryService.textContent = service ? document.querySelector(`#service option[value="${service}"]`).textContent : 'Not selected';
+                summaryTherapist.textContent = therapist ? document.querySelector(`#therapist option[value="${therapist}"]`).textContent : 'Not selected';
+                summaryDate.textContent = date || 'Not selected';
+                summaryTime.textContent = time || 'Not selected';
+                summaryPhone.textContent = phone ? `+254${phone}` : 'Not provided';
+
+                totalPrice.textContent = service ? prices[service].toLocaleString() : '0';
+
+                if (therapist && therapistImages[therapist]) {
+                    therapistImage.src = therapistImages[therapist];
+                    therapistImage.alt = `${document.querySelector(`#therapist option[value="${therapist}"]`).textContent}`;
+                } else {
+                    therapistImage.src = therapistImages[emma];
+                    therapistImage.alt = 'Therapist';
+                }
+            });
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your booking! We will confirm your appointment shortly.');
+            });
+        });
+    </script>
+</body>
+</html>
