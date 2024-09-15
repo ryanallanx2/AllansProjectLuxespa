@@ -246,3 +246,57 @@ document.addEventListener('DOMContentLoaded', function() {
  // Listen for changes in the color scheme preference
  prefersDarkScheme.addListener(updateBoxText);
 
+ //ookig cost
+ document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('bookingForm');
+    const summaryService = document.getElementById('summaryService');
+    const summaryTherapist = document.getElementById('summaryTherapist');
+    const summaryDate = document.getElementById('summaryDate');
+    const summaryTime = document.getElementById('summaryTime');
+    const summaryPhone = document.getElementById('summaryPhone');
+    const totalPrice = document.getElementById('totalPrice');
+    const therapistImage = document.getElementById('therapistImage');
+
+    const prices = {
+        aromatherapy: 35000,
+        facial: 30000,
+        hydrotherapy: 40000,
+        gemstone: 45000
+    };
+
+    const therapistImages = {
+        emma: './sources/spaat4.png',
+        michelle: './sources/spaat3.png',
+        sophia: './sources/spaat2.png',
+        stacy: './sources/spaat1.png'
+    };
+
+    form.addEventListener('change', function() {
+        const service = document.getElementById('service').value;
+        const therapist = document.getElementById('therapist').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const phone = document.getElementById('phone').value;
+
+        summaryService.textContent = service ? document.querySelector(`#service option[value="${service}"]`).textContent : 'Not selected';
+        summaryTherapist.textContent = therapist ? document.querySelector(`#therapist option[value="${therapist}"]`).textContent : 'Not selected';
+        summaryDate.textContent = date || 'Not selected';
+        summaryTime.textContent = time || 'Not selected';
+        summaryPhone.textContent = phone ? `+254${phone}` : 'Not provided';
+
+        totalPrice.textContent = service ? prices[service].toLocaleString() : '0';
+
+        if (therapist && therapistImages[therapist]) {
+            therapistImage.src = therapistImages[therapist];
+            therapistImage.alt = `${document.querySelector(`#therapist option[value="${therapist}"]`).textContent}`;
+        } else {
+            therapistImage.src = '/placeholder.svg?height=100&width=100';
+            therapistImage.alt = 'Therapist';
+        }
+    });
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your booking! We will confirm your appointment shortly.');
+    });
+});
