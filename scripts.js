@@ -1,17 +1,17 @@
     //3d testimonial card carousel 
     const testimonials = [
-        { name: "Emily S.", image: "./sources/testimonial1.png", content: "The aromatherapy massage at Luxe Spa was absolutely divine. I left feeling completely rejuvenated and stress-free. Can't wait to return!" },
-        { name: "James L.", image: "./sources/testimonials1.png", content: "Luxe Spa is my go-to place for relaxation. The hydrotherapy session was incredibly refreshing, and the attention to detail is unparalleled." },
-        { name: "Sarah M.", image: "./sources/testimonial2.png", content: "The holistic approach at Luxe Spa is impressive. Their treatments complement my yoga practice perfectly, leaving me well balanced." },
-        { name: "Michael R.", image: "./sources/testimonials2.png", content: "As an athlete, recovery is crucial. The sports massage at Luxe Spa has become an essential part of my training regimen. Highly recommended!" },
-        { name: "Laura K.", image: "./sources/testimonial3.png", content: "The ambiance at Luxe Spa is so inspiring. After my facial treatment, I felt a surge of creativity. It's more than just a spa, it's an experience." },
-        { name: "David P.", image: "./sources/testimonials3.png", content: "In my high-stress job, Luxe Spa is my sanctuary. Their mindfulness treatments have helped me maintain focus and calm in chaotic times." },
-        { name: "Sophie T.", image: "./sources/testimonial4.png", content: "The attention to detail at Luxe Spa is impeccable. From the decor to the treatments, everything is designed to perfection." },
-        { name: "Robert M.", image: "./sources/testimonials4.png", content: "I've been to many spas, but Luxe Spa stands out. The staff's expertise and the tranquil environment make every visit special." },
-        { name: "Olivia C.", image: "./sources/testimonial5.png", content: "The reflexology treatment at Luxe Spa worked wonders for my tired feet. It's now an essential part of my performance preparation." },
-        { name: "Daniel H.", image: "./sources/testimonials5.png", content: "I've experienced spas worldwide, and Luxe Spa ranks among the best. Their unique treatments and top-notch service are truly world-class." },
+        { name: "Emily S.", image: "./sources/testimonial1.png", content: "The aromatherapy massage at Luxe Spa was absolutely divine. I left feeling completely rejuvenated and stress-free." },
+        { name: "James L.", image: "./sources/testimonials1.png", content: "Luxe Spa is my go-to place for relaxation. The hydrotherapy session was incredibly refreshing." },
+        { name: "Sarah M.", image: "./sources/testimonial2.png", content: "The holistic approach at Luxe Spa is impressive. Their treatments complement my yoga practice perfectly." },
+        { name: "Michael R.", image: "./sources/testimonials2.png", content: "As an athlete, recovery is crucial. The sports massage at Luxe Spa has become an essential part of my training regimen." },
+        { name: "Laura K.", image: "./sources/testimonial3.png", content: "The ambiance at Luxe Spa is so inspiring. After my facial treatment, I felt a surge of creativity. It's more than just a spa." },
+        { name: "David P.", image: "./sources/testimonials3.png", content: "In my high-stress job, Luxe Spa is my sanctuary. Their mindfulness treatments have helped me maintain focus." },
+        { name: "Sophie T.", image: "./sources/testimonial4.png", content: "The attention to detail at Luxe Spa is impeccable. From the decor to the treatments, everything is nicely designed." },
+        { name: "Robert M.", image: "./sources/testimonials4.png", content: "I've been to many spas, but Luxe Spa stands out. The staff's expertise and the tranquil environment are magical." },
+        { name: "Olivia C.", image: "./sources/testimonial5.png", content: "The reflexology treatment at Luxe Spa worked wonders for my tired feet. It's now an essential part of my life." },
+        { name: "Daniel H.", image: "./sources/testimonials5.png", content: "I've experienced spas worldwide, and Luxe Spa ranks among the best. Their unique treatments are truly world-class." },
         { name: "Emma W.", image: "./sources/testimonial6.png", content: "After long hours at the office, Luxe Spa's deep tissue massage is my go-to stress reliever. It's like they have magic hands!" },
-        { name: "Alex R.", image: "./sources/testimonials7.png", content: "The sports therapy at Luxe Spa has significantly improved my game. Their understanding of athlete needs is impressive." }
+        { name: "Alex R.", image: "./sources/testimonials7.png", content: "The sports therapy at Luxe Spa has significantly improved my game. Their therapy is impressive." }
     ];
 
     function createTestimonialCard(testimonial) {
@@ -19,13 +19,13 @@
             <div class="testimonial-card card h-100">
                 <div class="card-body">
                     <div class="d-flex flex-column align-content-center mb-2">
-                        <div class="col-md-2">
-                        <img src="${testimonial.image}" alt="${testimonial.name}" class="mb-2 rounded h-100 float-start card-img-top">
+                        <div class="col-3 col-md-3 col-lg-2">
+                        <img src="${testimonial.image}" alt="${testimonial.name}" class="mb-1 rounded h-100 float-start card-img-top flex img-fluid">
                         </div>
                         <div>
-                            <h5 class="mb-1">${testimonial.name}</h5>
+                            <h5  style="font-size: 97%;" class="mb-0">${testimonial.name}</h5>
                         </div>
-                        <p class="mb-2">${testimonial.content}</p>
+                        <p style="font-size: 97%;" class="mb-2">${testimonial.content}</p>
                     </div>
                 </div>
             </div>
