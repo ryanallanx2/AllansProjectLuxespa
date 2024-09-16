@@ -19,17 +19,17 @@
     <header class="container-fluid py-0">
         <nav class="navbar navbar-expand-lg navbar-expand-md">
             <div class="container d-flex align-content-center">
-                <a class="navbar-brand d-flex align-content-center" href="#home"><img src="./sources/logospa.png" class="float-start card-img-top ds d-flex align-items-center" alt="logo icon"><span class="fs-5 fw-bold text-warning d-flex align-items-center">luxe</span><span class="fs-5 fw-bold cx align-content-center">spa</span></a>
+                <a class="navbar-brand d-flex align-content-center" href="index.html#home"><img src="./sources/logospa.png" class="float-start card-img-top ds d-flex align-items-center" alt="logo icon"><span class="fs-5 fw-bold text-warning d-flex align-items-center">luxe</span><span class="fs-5 fw-bold cx align-content-center">spa</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon cx"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto nav-underline">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#therapists">Therapists</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#facility">Facility</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#therapists">Therapists</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#facility">Facility</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
                     </ul>
                     <div class="d-flex align-items-center">
                         <a href="#" class="d-flex align-items-center text-decoration-none cx me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
@@ -70,7 +70,7 @@
                                 <label for="therapist">Select Therapist (Optional)</label>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-md-6">
+                                <div class="mb-3 mb-md-0 col-md-6">
                                     <div class="form-floating">
                                         <input type="date" class="form-control" id="date" required>
                                         <label for="date">Preferred Date</label>
@@ -108,13 +108,13 @@
                         <div id="bookingSummary" class="row">
                             <div class="col-md-8">
                                 <p><strong>Service:</strong> <span id="summaryService">Not selected</span></p>
+                                <div class="col-md-4 text-start ">
+                                    <img class="therapist-img" id="therapistImage" src="./sources/placeholder.svg" alt="Therapist">
+                                </div>
                                 <p><strong>Therapist:</strong> <span id="summaryTherapist">Not selected</span></p>
                                 <p><strong>Date:</strong> <span id="summaryDate">Not selected</span></p>
                                 <p><strong>Time:</strong> <span id="summaryTime">Not selected</span></p>
                                 <p><strong>Phone:</strong> <span id="summaryPhone">Not provided</span></p>
-                            </div>
-                            <div class="col-md-4 text-end">
-                                <img class="therapist-img" id="therapistImage" src="/placeholder.svg?height=100&width=100" alt="Therapist" class="therapist-img">
                             </div>
                         </div>
                         <hr>
@@ -128,59 +128,104 @@
         </div>
     </main>
     
-    <footer class="pt-2">
+    <footer class="pt-3 pt-md-5">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4 mb-3 mb-md-0">
-                <a class="navbar-brand d-flex align-content-center mb-3" href="#home">
-                    <img src="./sources/logospa.png" class="float-start card-img-top ds" alt="Emma Johnson">
-                    <span class="fs-5 fw-bold text-warning d-flex align-items-center">Luxe</span>
-                    <span class="fs-5 fw-bold align-content-center">Spa</span>
-                </a>
-                <p>Luxe Spa is your sanctuary for relaxation and rejuvenation. Experience the pinnacle of luxury wellness and beauty treatments.</p>
-              <div class="d-flex grow mb-4">
+            <div class="row">
+        <div class="col-md-4 mb-3 mb-md-0">
+            <a class="navbar-brand d-flex align-content-center mb-3" href="#home">
+                <img src="./sources/logospa.png" class="float-start card-img-top ds" alt="Emma Johnson">
+                <span class="fs-5 fw-bold text-warning d-flex align-items-center">Luxe</span>
+                <span class="fs-5 fw-bold align-content-center">Spa</span>
+            </a>
+            <p>Luxe Spa is your sanctuary for relaxation and rejuvenation. Experience the pinnacle of luxury wellness and beauty treatments.</p>
+            <div class="d-flex grow mb-4">
                 <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-              </div>
             </div>
-    
-            <div class="col-md-2 mb-3 mb-md-0 offset-md-2">
-              <h5 class="mb-4">Services</h5>
-              <ul class="list-unstyled">
-                <li><a href="#services" class="cx text-decoration-none mb-3">Massages</a></li>
-                <li><a href="#services" class="cx text-decoration-none mb-3">Facials</a></li>
-                <li><a href="#services" class="cx text-decoration-none mb-3">Body Treatments</a></li>
-                <li><a href="#services" class="cx text-decoration-none mb-3">Manicure & Pedicure</a></li>
-                <li><a href="#services" class="cx text-decoration-none mb-3">Therapy</a></li>
-                <li><a href="#services" class="cx text-decoration-none mb-3">Reflexology</a></li>
-              </ul>
-            </div>
-            
-            <div class="col-md-2 mb-3 mb-md-0">
-              <h5 class="mb-4">Quick Links</h5>
-              <ul class="list-unstyled">
-                <li><a href="#home" class="cx text-decoration-none">Home</a></li>
-                <li><a href="#services" class="cx text-decoration-none">Services</a></li>
-                <li><a href="#therapists" class="cx text-decoration-none">Therapists</a></li>
-                <li><a href="#facility" class="cx text-decoration-none">Facility</a></li>
-                <li><a href="#about" class="cx text-decoration-none">About Us</a></li>
-                <li><a href="#contact" class="cx text-decoration-none">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div class="col-md-2 mb-3 mb-md-0">
-              <h5 class="mb-4">Contact us</h5>
-              <ul class="list-unstyled">
-                <li><a href="#contact" class="cx text-decoration-none mb-2">+254791285679</a></li>
-                <li><a href="#contact" class="cx text-decoration-none mb-2">location</a></li>
-                <li><a href="#contact" class="cx text-decoration-none mb-2">Careers</a></li>
-                <li><a href="#contact" class="cx text-decoration-none mb-2">FAQ</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
+        
+        <div class="col-md-8 d-none d-md-block">
+            <div class="row">
+                <div class="col-md-3 offset-md-3 mb-3 mb-md-0 d-flex flex-column align-items-start">
+                    <h5 class="mb-4 text-start">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#services" class="cx text-decoration-none mb-3">Massages</a></li>
+                        <li><a href="index.html#services" class="cx text-decoration-none mb-3">Facials</a></li>
+                        <li><a href="index.html#services" class="cx text-decoration-none mb-3">Body Treatments</a></li>
+                        <li><a href="index.html#services" class="cx text-decoration-none mb-3">Manicure & Pedicure</a></li>
+                        <li><a href="index.html#services" class="cx text-decoration-none mb-3">Therapy</a></li>
+                        <li><a href="index.html#services" class="cx text-decoration-none mb-3">Reflexology</a></li>
+                    </ul>
+                </div>
+        
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-0"><a href="index.html#home" class="cx text-decoration-none">Home</a></li>
+                        <li class="mb-0"><a href="index.html#services" class="cx text-decoration-none">Services</a></li>
+                        <li class="mb-0"><a href="index.html#therapists" class="cx text-decoration-none">Therapists</a></li>
+                        <li class="mb-0"><a href="index.html#facility" class="cx text-decoration-none">Facility</a></li>
+                        <li class="mb-0"><a href="index.html#about" class="cx text-decoration-none">About Us</a></li>
+                        <li class="mb-0"><a href="index.html#contact" class="cx text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <div class="col-md-3 mb-3 mb-md-0 contact-us d-md-flex flex-column">
+                    <h5 class="mb-4">Contact us</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="index.html#contact" class="cx text-decoration-none">+254791285679</a></li>
+                        <li><a href="index.html#contact" class="cx text-decoration-none">location</a></li>
+                        <li><a href="index.html#contact" class="cx text-decoration-none">Careers</a></li>
+                        <li><a href="index.html#contact" class="cx text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    
+    
+                    <div class="d-md-flex flex-md-row">   
+                        <div class="row row-cols-3 d-md-none">
+                            <div class="col mb-3 mb-md-0">
+                                <h5 class="mb-4">Services</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="index.html#services" class="cx text-decoration-none mb-3">Massages</a></li>
+                                    <li><a href="index.html#services" class="cx text-decoration-none mb-3">Facials</a></li>
+                                    <li><a href="index.html#services" class="cx text-decoration-none mb-3">Body Treatments</a></li>
+                                    <li><a href="index.html#services" class="cx text-decoration-none mb-3">Manicure & Pedicure</a></li>
+                                    <li><a href="index.html#services" class="cx text-decoration-none mb-3">Therapy</a></li>
+                                    <li><a href="index.html#services" class="cx text-decoration-none mb-3">Reflexology</a></li>
+                                </ul>
+                            </div>
+                    
+                            <div class="col mb-3 mb-md-0">
+                                <h5 class="mb-4">Quick Links</h5>
+                                <ul class="list-unstyled">
+                                  <li><a href="index.html#home" class="cx text-decoration-none">Home</a></li>
+                                  <li><a href="index.html#services" class="cx text-decoration-none">Services</a></li>
+                                  <li><a href="index.html#therapists" class="cx text-decoration-none">Therapists</a></li>
+                                  <li><a href="index.html#facility" class="cx text-decoration-none">Facility</a></li>
+                                  <li><a href="index.html#about" class="cx text-decoration-none">About Us</a></li>
+                                  <li><a href="index.html#contact" class="cx text-decoration-none">Contact</a></li>
+                                </ul>
+                            </div>
+                    
+                            <div class="col mb-3 mb-md-0">
+                                <h5 class="mb-4">Contact us</h5>
+                                <ul class="list-unstyled">
+                                  <li><a href="index.html#contact" class="cx text-decoration-none mb-2">+254791285679</a></li>
+                                  <li><a href="index.html#contact" class="cx text-decoration-none mb-2">location</a></li>
+                                  <li><a href="index.html#contact" class="cx text-decoration-none mb-2">Careers</a></li>
+                                  <li><a href="index.html#contact" class="cx text-decoration-none mb-2">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+        </div>
+        
         <div class="border-top py-0">
           <div class="container">
             <p class="text-center mb-0">&copy; 2024 <span class="fs-5 fw-bold text-warning">luxe</span><span class="fs-5 fw-bold cx">spa</span>. All rights reserved. | Designed with <i class="bi bi-heart-pulse text-warning mb-2 fs-5"></i> by <a href="#" class="cx text-decoration-none">Dev. Allan Mwangi</a></p>
